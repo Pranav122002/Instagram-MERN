@@ -1,7 +1,7 @@
 # Instagram Clone with Messenger
 A MERN stack Instagram Clone with Messenger.
 
-## Functionalities this Instagram clone will have :
+## Functionalities this Instagram clone has :
  * Sign in and Sign up
  * Reset password if the user forgot the password
  * Send message to other users
