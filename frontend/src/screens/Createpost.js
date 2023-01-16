@@ -19,7 +19,7 @@ export default function Createpost() {
     // saving post to mongodb
     if (url) {
 
-      fetch("/createPost", {
+      fetch("http://localhost:5000/createPost", {
         method: "post",
         headers: {
           "Content-Type": "application/json",
@@ -105,7 +105,7 @@ export default function Createpost() {
         </div>
         <textarea value={body} onChange={(e) => {
           setBody(e.target.value)
-        }} type="text" placeholder="Write a caption..."></textarea>
+        }} type="text" placeholder="Write a caption...."></textarea>
       </div>
     </div>
   );

@@ -14,6 +14,7 @@ import { LoginContext } from "./context/LoginContext";
 import Modal from "./components/Modal";
 import UserProfie from "./components/UserProfile";
 import MyFolliwngPost from "./screens/MyFollowingPost";
+import Chat from "./pages/Chat";
 
 function App() {
   const [userLogin, setUserLogin] = useState(false);
@@ -26,6 +27,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/signup" element={<SignUp />}></Route>
+            <Route path="/messenger" element={<Chat />} />
             <Route path="/signin" element={<SignIn />}></Route>
             <Route exact path="/profile" element={<Profie />}></Route>
             <Route path="/createPost" element={<Createpost />}></Route>
