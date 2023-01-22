@@ -46,6 +46,8 @@ export default function SignIn() {
 
           setUserLogin(true)
           navigate("/")
+          window.location.reload();
+
         }
         console.log(data)
       })

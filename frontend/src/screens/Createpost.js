@@ -50,9 +50,9 @@ export default function Createpost() {
     console.log(body, image)
     const data = new FormData()
     data.append("file", image)
-    data.append("upload_preset", "insta-clone")
-    data.append("cloud_name", "cantacloud2")
-    fetch("https://api.cloudinary.com/v1_1/cantacloud2/image/upload", {
+    data.append("upload_preset", "instagram-clone-with-messenger")
+    data.append("cloud_name", "pranavpatil122002")
+    fetch("https://api.cloudinary.com/v1_1/pranavpatil122002/image/upload", {
       method: "post",
       body: data
     }).then(res => res.json())

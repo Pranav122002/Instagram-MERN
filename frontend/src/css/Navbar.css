@@ -1,33 +1,96 @@
-img {
-  width: 10%;
+
+
+
+.one {
+
+  width: 100%;
+  height: 10%;
+} 
+ 
+.two {
+
+  width: 100%;
+
+} 
+
+
+
+.nav-mobile {
+  display: none;
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ #insta-logo {
+  width: 70%;
+ margin: 7px  7px  7px  7px ;
   object-fit: contain;
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-around;
+ 
+ 
+  border-right: 1px solid rgb(219, 219, 219);
+  
+  
+  margin: 0;
+  padding: 0;
+  width: 17%;
 
-  box-shadow: 1px 5px 5px #e0dcdc;
+  position: fixed;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  min-width: 180px;
+
+}
+
+
+.spanicon {
+  margin-right: 10px;
+}
+
+ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  padding-left: 0px;
+}
+
+li {
+  list-style: none;
+  width: 90%;
+  padding-left: 20px;
+ 
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+margin-left: 10px;
+
+  display: flex;
+  align-items:flex-start;
+ border-radius: 18px;
+
 }
 
 .nav-mobile {
   display: none;
 }
-
-ul {
-  display: flex;
-  align-items: baseline;
-}
-
-li {
-  list-style: none;
-  padding: 1px 20px;
-}
-
 a {
   text-decoration: none;
   color: black;
   font-size: 18px;
+  width: 95%;
+  padding-left: 0px;
+  
+ 
 }
 
 .primaryBtn {
@@ -48,28 +111,58 @@ a {
   box-shadow: 0 10px 20px -10px rgba(219, 24, 44, 0.6);
 }
 
+#profilepic {
+  border-radius: 100%;
+}
+
+.nav-menu {
+  padding-left: 0px;
+}
+
+
+ li:hover {
+       background-color: #F5F5F5;
+       color: black;
+      }
+
+.active {
+     font-weight: bolder;
+
+     }
+
+
+    
+    
+
+
+
+
+
+ 
+
 @media screen and (max-width: 800px) {
-  #insta-logo {
+
+  .navbar{
     display: none;
   }
-  .nav-menu {
-    display: none;
-  }
+  
+
   .nav-mobile {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  .navbar {
-    width: 100%;
     position: fixed;
+   
+    display: flex;
+    flex-direction: row;
+   
     bottom: 0;
     left: 0;
     background-color: #fff;
     box-shadow: 0px -2px 5px #fff;
   }
-  .navbar ul {
-    margin: 0;
-    padding: 10px 0px;
-  }
-}
+
+ .nav-mobile li {
+  justify-content: center;
+  padding-left: 0px;
+ }
+}    
+
