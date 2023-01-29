@@ -36,3 +36,13 @@ textarea{
     outline: none;
     margin-top: 5px;
 }
+
+
+@media screen and (max-width: 800px) {
+
+    .createPost{
+        margin-top: 15%;
+    }
+   
+  }    
+  

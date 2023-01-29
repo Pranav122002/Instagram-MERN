@@ -27,8 +27,4 @@ A MERN stack Instagram Clone with Messenger.
 * Socket.IO
 * Nodejs
 * Express
-<<<<<<< HEAD
 * MongoDB
-=======
-* MongoDB
->>>>>>> 030a11900b1878a964d126c1b8bd096b96c0ca89

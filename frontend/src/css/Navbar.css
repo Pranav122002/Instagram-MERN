@@ -18,6 +18,9 @@
 .nav-mobile {
   display: none;
 }
+.nav-mobile-top {
+  display: none;
+}
  
  
  
@@ -80,9 +83,7 @@ margin-left: 10px;
 
 }
 
-.nav-mobile {
-  display: none;
-}
+
 a {
   text-decoration: none;
   color: black;
@@ -157,7 +158,36 @@ a {
     bottom: 0;
     left: 0;
     background-color: #fff;
-    box-shadow: 0px -2px 5px #fff;
+   
+  }
+
+  .nav-mobile-top {
+    width: 100%;
+    position: fixed;
+   
+    display: flex;
+    flex-direction: row;
+   
+    top: 0;
+    left: 0;
+    background-color: #fff;
+   
+  }
+  #msg-top {
+    position: relative;
+    float: right;
+    margin-right: 10%;
+    
+  }
+  #insta-logo-top {
+    width: 50%;
+    float: left;
+    margin-left: 10px;
+  }
+  #mob-top-div {
+display: flex;
+flex-direction: row;
+
   }
 
  .nav-mobile li {
