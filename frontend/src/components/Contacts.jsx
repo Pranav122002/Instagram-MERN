@@ -86,7 +86,7 @@ const Container = styled.div`
   background-color: #white;
   gap: 0.8rem;
   
-  border-right: 1px solid rgb(129, 121, 121);
+  border-right: 1px solid rgb(219, 219, 219);
   
 
   .contacts {
@@ -109,10 +109,10 @@ const Container = styled.div`
 
     .contact {
       background-color: white;
-      
+      margin-left: 20px;
       height: 7%;
       cursor: pointer;
-      width: 100%;
+      width: 70%;
      
       
       display: flex;
@@ -122,9 +122,10 @@ const Container = styled.div`
      
       .username {
         h3 {
-          color: black;
+          
+          color: rgb(38, 38, 38);
           font-size: large;
-          font-weight: 600;
+          font-weight: 400;
         }
         }
       }
@@ -141,13 +142,15 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     gap: 2rem;
-  
+    border-bottom: 1px solid rgb(219, 219, 219);
+
    
       p {
         color:black;
+     
         font-size: x-large;
 
-        font-weight: 600;
+        font-weight: 500;
       }
         
       

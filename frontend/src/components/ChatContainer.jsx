@@ -159,7 +159,7 @@ const Container = styled.div`
    
     align-items: center;
     padding: 0 1rem;
-
+    border-bottom: 1px solid rgb(219, 219, 219);
 
     .user-details {
       display: flex;
@@ -170,7 +170,7 @@ const Container = styled.div`
         p {
           color: black;
           font-size: large;
-          font-weight: 600;
+          font-weight: 500;
         }
       }
     }
@@ -207,9 +207,9 @@ const Container = styled.div`
         max-width: 40%;
         height: 20px
         overflow-wrap: break-word;
-        padding: 0.1rem;
-        font-size: medium;
-        border-radius: 0.5rem;
+        padding: 0.5rem;
+        font-size: small;
+        border-radius: 1rem;
         color: #d1d1d1;
 
         
@@ -228,14 +228,17 @@ const Container = styled.div`
     .sended {
       justify-content: flex-end;
       .content {
-        background-color: #F8F4FF;
+        background-color: rgb(239,239,239);
         color: black;
+        
       }
     }
     .recieved {
       justify-content: flex-start;
       .content {
-        background-color: #D3D3D3;
+        background-color: white;
+        border: 1px solid rgb(239, 239,239);
+
         color: black;
       }
     }

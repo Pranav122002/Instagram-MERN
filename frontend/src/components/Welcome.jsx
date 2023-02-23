@@ -74,7 +74,7 @@ export default function Welcome() {
             ></polygon>
           </svg>
         </div>
-        <p id="your">Your Messages</p >
+        <p id="your">Your messages</p >
         <p id="text">Send private photos and messages to a friend or group.</p>
         <button>Send message</button>
       </div>
@@ -96,6 +96,8 @@ const Container = styled.div`
 #text{
   padding-left: 5px;
   padding-right: 5px;
+  color: rgb(142, 142, 142);
+  font-size: small;
 }
   button {
     color: white;
