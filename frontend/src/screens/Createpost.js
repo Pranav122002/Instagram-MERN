@@ -7,6 +7,9 @@ export default function Createpost() {
   const [body, setBody] = useState("");
   const [image, setImage] = useState("")
   const [url, setUrl] = useState("")
+  const [user, setUser] = useState("")
+  const [username, setUsername] = useState("")
+  const [userpic, setUserpic] = useState("")
   const navigate = useNavigate()
 
   // Toast functions
@@ -15,6 +18,29 @@ export default function Createpost() {
 
 
   useEffect(() => {
+    fetch(`http://localhost:5000/user/${JSON.parse(localStorage.getItem("user"))._id}`, {
+      headers: {
+        Authorization: "Bearer " + localStorage.getItem("jwt"),
+      },
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        console.log("my resut ..........");
+        
+        console.log(result.user)
+      
+        setUserpic(result.user.Photo)
+        setUser(result.user)
+        setUsername(result.user.name)
+       
+      });
+  }, []);
+
+
+  useEffect(() => {
+
+   
+
 
     // saving post to mongodb
     if (url) {
@@ -82,6 +108,7 @@ export default function Createpost() {
         <img
           id="output"
           src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-image-512.png"
+        
         />
         <input
           type="file"
@@ -95,13 +122,28 @@ export default function Createpost() {
       {/* details */}
       <div className="details">
         <div className="card-header">
+
+
+
+
+
+
           <div className="card-pic">
             <img
-              src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                src= {userpic}
               alt=""
             />
           </div>
-          <h5>Pranav</h5>
+
+
+
+
+    
+          <h5>{username}</h5>
+
+
+
+
         </div>
         <textarea value={body} onChange={(e) => {
           setBody(e.target.value)

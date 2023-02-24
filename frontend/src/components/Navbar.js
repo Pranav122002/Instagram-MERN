@@ -204,6 +204,7 @@ export default function Navbar({ login }) {
       return [
         <>
           <div id="mob-top-div">
+
             <div>
               <img
                 id="insta-logo-top"

@@ -155,9 +155,10 @@ a {
     display: flex;
     flex-direction: row;
    
-    bottom: 0;
+    bottom: -17px;
     left: 0;
     background-color: #fff;
+   
    
   }
 
@@ -168,9 +169,10 @@ a {
     display: flex;
     flex-direction: row;
    
-    top: 0;
+    top: -17px;
     left: 0;
     background-color: #fff;
+
    
   }
   #msg-top {
@@ -179,6 +181,8 @@ a {
     margin-right: 10%;
     
   }
+
+ 
   #insta-logo-top {
     width: 50%;
     float: left;
