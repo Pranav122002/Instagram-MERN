@@ -25,17 +25,17 @@ mongoose.connection.on("error", () => {
     console.log("MongoDB connection error !!!")
 })
 
-// // serving the frontend
-// app.use(express.static(path.join(__dirname, "./frontend/build")))
+// serving the frontend
+app.use(express.static(path.join(__dirname, "./frontend/build")))
 
-// app.get("*", (req, res) => {
-//     res.sendFile(
-//         path.join(__dirname, "./frontend/build/index.html"),
-//         function (err) {
-//             res.status(500).send(err)
-//         }
-//     )
-// })
+app.get("*", (req, res) => {
+    res.sendFile(
+        path.join(__dirname, "./frontend/build/index.html"),
+        function (err) {
+            res.status(500).send(err)
+        }
+    )
+})
 
 
 const server = app.listen(port, () => {

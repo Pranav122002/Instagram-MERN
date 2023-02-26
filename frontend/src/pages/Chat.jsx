@@ -20,7 +20,7 @@ export default function Chat() {
       navigate("./signup");
     } else {
       fetch(
-        `http://localhost:5000/user/${
+        `/user/${
           JSON.parse(localStorage.getItem("user"))._id
         }`,
         {
@@ -51,7 +51,7 @@ export default function Chat() {
 
   useEffect(() => {
     fetch(
-      `http://localhost:5000/allusers/${
+      `/allusers/${
         JSON.parse(localStorage.getItem("user"))._id
       }`,
       {

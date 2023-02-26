@@ -10,9 +10,14 @@ export default function PostDetail({ item, toggleDetails }) {
   const notifyA = (msg) => toast.error(msg);
   const notifyB = (msg) => toast.success(msg);
 
+
+
+console.log(item);
+
+
   const removePost = (postId) => {
     if (window.confirm("Do you really want to delete this post ?")) {
-      fetch(`http://localhost:5000/deletePost/${postId}`, {
+      fetch(`/deletePost/${postId}`, {
         method: "delete",
         headers: {
           Authorization: "Bearer " + localStorage.getItem("jwt"),
@@ -20,6 +25,8 @@ export default function PostDetail({ item, toggleDetails }) {
       })
         .then((res) => res.json())
         .then((result) => {
+        
+          
           console.log(result);
           toggleDetails();
           navigate("/");

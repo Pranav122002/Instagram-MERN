@@ -13,7 +13,7 @@ export default function Welcome() {
       navigate("/signup");
     } else {
       fetch(
-        `http://localhost:5000/user/${
+        `/user/${
           JSON.parse(localStorage.getItem("user"))._id
         }`,
         {
