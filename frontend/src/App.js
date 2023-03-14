@@ -12,6 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Createpost from "./screens/Createpost";
 import { LoginContext } from "./context/LoginContext";
 import Modal from "./components/Modal";
+import Search from "./components/Search";
 import UserProfie from "./components/UserProfile";
 import MyFolliwngPost from "./screens/MyFollowingPost";
 import Chat from "./pages/Chat";
@@ -19,6 +20,7 @@ import Chat from "./pages/Chat";
 function App() {
   const [userLogin, setUserLogin] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+ 
   return (
     <BrowserRouter>
       <div className="App">
@@ -33,10 +35,12 @@ function App() {
             <Route path="/createPost" element={<Createpost />}></Route>
             <Route path="/profile/:userid" element={<UserProfie />}></Route>
             <Route path="/followingpost" element={<MyFolliwngPost />}></Route>
+            <Route path="/search" element={<Search />}></Route>
           </Routes>
           <ToastContainer theme="dark" />
 
           {modalOpen && <Modal setModalOpen={setModalOpen}></Modal>}
+      
         </LoginContext.Provider>
       </div>
     </BrowserRouter>

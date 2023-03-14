@@ -3,7 +3,7 @@ import "../css/PostDetail.css";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-export default function PostDetail({ item, toggleDetails }) {
+export default function PostDetail({ item, toggleDetails  }) {
   const navigate = useNavigate();
 
   // Toast functions
@@ -17,7 +17,7 @@ console.log(item);
 
   const removePost = (postId) => {
     if (window.confirm("Do you really want to delete this post ?")) {
-      fetch(`/deletePost/${postId}`, {
+      fetch(`http://localhost:5000/deletePost/${postId}`, {
         method: "delete",
         headers: {
           Authorization: "Bearer " + localStorage.getItem("jwt"),

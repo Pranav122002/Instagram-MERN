@@ -81,4 +81,16 @@ router.put("/uploadProfilePic", requireLogin, (req, res) => {
     })
 })
 
+router.post('/search-users',(req,res)=>{
+    let userPattern = new RegExp(req.body.query, "i"); // add "^" at start for exact search 
+    USER.find({name:{$regex:userPattern}})
+    .select("_id email name")
+    .then(user=>{
+        res.json({user})
+    }).catch(err=>{
+        console.log(err)
+    })
+})
+
+
 module.exports = router;

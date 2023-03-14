@@ -41,7 +41,7 @@ export default function Navbar({ login }) {
       navigate("./signup");
     } else {
       fetch(
-        `/user/${
+        `http://localhost:5000/user/${
           JSON.parse(localStorage.getItem("user"))._id
         }`,
         {
@@ -83,10 +83,10 @@ export default function Navbar({ login }) {
 
           <NavLink to="/search">
             <li>
-              {" "}
+           
               <span className="spanicon">
                 {!onSearch ? searchIconOutline : searchIconFill}
-              </span>{" "}
+              </span>
               Search
             </li>
           </NavLink>
@@ -109,14 +109,14 @@ export default function Navbar({ login }) {
               Messages
             </li>
           </NavLink>
-          <NavLink to="/notifications">
+          {/* <NavLink to="/notifications">
             <li>
               <span className="spanicon">
                 {onLike ? likeFillBlack : likeOutline}
               </span>{" "}
               Notifications
             </li>
-          </NavLink>
+          </NavLink> */}
 
           <NavLink to="/createPost">
             <li>
@@ -140,7 +140,7 @@ export default function Navbar({ login }) {
             </li>
           </NavLink>
 
-          <Link to="/">
+          <Link to={location}>
             <li onClick={() => setModalOpen(true)}>
               <span class="material-symbols-outlined spanicon">logout</span>
               Log Out
@@ -186,7 +186,7 @@ export default function Navbar({ login }) {
               <span>{onExplore ? exploreFill : exploreOutline}</span>
             </li>
           </Link>
-          <Link to={""}>
+          <Link to={location}>
             <li onClick={() => setModalOpen(true)}>
               <span class="material-symbols-outlined">logout</span>
             </li>
@@ -216,9 +216,24 @@ export default function Navbar({ login }) {
               />
             </div>
 
-            <NavLink to="/messenger">
+
+
+            <Link to="/search">
+           
+           
+              <span className="spanicon">
+                {!onSearch ? searchIconOutline : searchIconFill}
+              </span>
+              
+        
+          </Link>
+
+
+            <Link to="/messenger">
               <span id="msg-top">{onChat ? messageFill : messageOutline}</span>
-            </NavLink>
+            </Link>
+
+
           </div>
         </>,
       ];

@@ -15,7 +15,7 @@ app.use(require("./routes/auth"))
 app.use(require("./routes/createPost"))
 app.use(require("./routes/user"))
 app.use(require("./routes/messages"))
-mongoose.connect(mongoUrl);
+mongoose.connect(mongoUrl, { useNewUrlParser: true });
 
 mongoose.connection.on("connected", () => {
     console.log("MongoDB connection successfull ...")
@@ -25,17 +25,17 @@ mongoose.connection.on("error", () => {
     console.log("MongoDB connection error !!!")
 })
 
-// serving the frontend
-app.use(express.static(path.join(__dirname, "./frontend/build")))
+// // serving the frontend
+// app.use(express.static(path.join(__dirname, "./frontend/build")))
 
-app.get("*", (req, res) => {
-    res.sendFile(
-        path.join(__dirname, "./frontend/build/index.html"),
-        function (err) {
-            res.status(500).send(err)
-        }
-    )
-})
+// app.get("*", (req, res) => {
+//     res.sendFile(
+//         path.join(__dirname, "./frontend/build/index.html"),
+//         function (err) {
+//             res.status(500).send(err)
+//         }
+//     )
+// })
 
 
 const server = app.listen(port, () => {

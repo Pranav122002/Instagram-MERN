@@ -31,7 +31,7 @@ export default function SignUp() {
     }
 
     // Sending data to server
-    fetch("/signup", {
+    fetch("http://localhost:5000/signup", {
       method: "post",
       headers: {
         "Content-Type": "application/json"

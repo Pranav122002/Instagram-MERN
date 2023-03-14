@@ -18,7 +18,7 @@ export default function Createpost() {
 
 
   useEffect(() => {
-    fetch(`/user/${JSON.parse(localStorage.getItem("user"))._id}`, {
+    fetch(`http://localhost:5000/user/${JSON.parse(localStorage.getItem("user"))._id}`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
@@ -45,7 +45,7 @@ export default function Createpost() {
     // saving post to mongodb
     if (url) {
 
-      fetch("/createPost", {
+      fetch("http://localhost:5000/createPost", {
         method: "post",
         headers: {
           "Content-Type": "application/json",
