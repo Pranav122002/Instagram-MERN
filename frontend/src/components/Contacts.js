@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import Logo from "../assets/logo.svg";
 import { useNavigate } from "react-router-dom";
 
 
@@ -19,7 +18,7 @@ export default function Contacts({ contacts, changeChat }) {
       navigate("./signup");
     } else {
     
-      fetch(`http://localhost:5000/user/${JSON.parse(localStorage.getItem("user"))._id}`, {
+      fetch(`/user/${JSON.parse(localStorage.getItem("user"))._id}`, {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("jwt"),
         },

@@ -13,7 +13,7 @@ import Createpost from "./screens/Createpost";
 import { LoginContext } from "./context/LoginContext";
 import Modal from "./components/Modal";
 import Search from "./components/Search";
-import UserProfie from "./components/UserProfile";
+import UserProfile from "./components/UserProfile";
 import MyFolliwngPost from "./screens/MyFollowingPost";
 import Chat from "./pages/Chat";
 
@@ -33,7 +33,7 @@ function App() {
             <Route path="/signin" element={<SignIn />}></Route>
             <Route exact path="/profile" element={<Profie />}></Route>
             <Route path="/createPost" element={<Createpost />}></Route>
-            <Route path="/profile/:userid" element={<UserProfie />}></Route>
+            <Route path="/profile/:userid" element={<UserProfile />}></Route>
             <Route path="/followingpost" element={<MyFolliwngPost />}></Route>
             <Route path="/search" element={<Search />}></Route>
           </Routes>

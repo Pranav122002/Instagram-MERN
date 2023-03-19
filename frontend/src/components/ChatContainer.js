@@ -13,7 +13,7 @@ export default function ChatContainer({ currentChat, socket }) {
   
   useEffect(() => {
     fetch(
-      `http://localhost:5000/user/${
+      `/user/${
         JSON.parse(localStorage.getItem("user"))._id
       }`,
       {
@@ -24,7 +24,7 @@ export default function ChatContainer({ currentChat, socket }) {
     )
       .then((res) => res.json())
       .then((result) => {
-        fetch("http://localhost:5000/getmsg", {
+        fetch("/getmsg", {
           method: "post",
           headers: {
             "Content-Type": "application/json",
@@ -48,7 +48,7 @@ export default function ChatContainer({ currentChat, socket }) {
       if (currentChat) {
         JSON.parse(
           localStorage.getItem(
-            `http://localhost:5000/user/${
+            `/user/${
               JSON.parse(localStorage.getItem("user"))._id
             }`
           )
@@ -60,7 +60,7 @@ export default function ChatContainer({ currentChat, socket }) {
 
   const handleSendMsg = (msg) => {
     fetch(
-      `http://localhost:5000/user/${
+      `/user/${
         JSON.parse(localStorage.getItem("user"))._id
       }`,
       {
@@ -77,7 +77,7 @@ export default function ChatContainer({ currentChat, socket }) {
           msg,
         });
 
-        fetch("http://localhost:5000/addmsg", {
+        fetch("/addmsg", {
           method: "post",
           headers: {
             "Content-Type": "application/json",

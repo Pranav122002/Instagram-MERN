@@ -3,7 +3,7 @@ import "../css/Search.css";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 
 
-export default function Search({ setSearchOpen }) {
+export default function Search() {
   const navigate = useNavigate();
 
   const [search, setSearch] = useState("");
@@ -11,7 +11,7 @@ export default function Search({ setSearchOpen }) {
 
   const fetchUsers = (query) => {
     setSearch(query);
-    fetch("http://localhost:5000/search-users", {
+    fetch("/search-users", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
