@@ -1,35 +1,88 @@
-.signIn{
-    /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB1lN1hGZAj0MpZ1ZoN7tt7q38JyzTvjmSMQ&usqp=CAU"); */
-    background-size: cover;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.signIn {
+  background-size: cover;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.loginForm{
-    background-color: #ffffff4d;
-    padding: 30px;
-    border: 1px solid rgb(129, 121, 121);
-    border-radius: 1px;
-} 
+.loginForm {
+  background-color: #ffffff4d;
+  padding: 30px;
+  border: 1px solid rgb(219, 219, 219);
 
-.loginForm2{
-    background-color: #ffffff4d;
-    padding: 20px;
-    margin-top: 5px;
-    border: 1px solid rgb(129, 121, 121);
-    border-radius: 1px;
+  border-radius: 1px;
 }
 
-#login-btn{
-    background-color: #1773EA;
-    border: none;
-    border-radius: 3px;
-    color: white;
-    font-weight: bold;
-    padding: 5px 10px;
-   
-    cursor: pointer;
-    margin-top: 8px;
+.loginForm2 {
+  background-color: #ffffff4d;
+  padding: 20px;
+  margin-top: 5px;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 1px;
 }
+
+#login-btn {
+  background-color: #0894f4;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+
+  cursor: pointer;
+  margin-top: 8px;
+
+}
+
+
+#email{
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 4px;
+
+}
+#password{
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 4px;
+
+}
+
+
+
+
+::placeholder {
+  color: #a9a6b4;
+  font-weight: 100;
+}
+
+
+
+.forgot{
+  font-weight: 300;
+
+}
+.facebook-button{
+  color: #385185;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+.separator {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.separator .line {
+  flex: 1;
+  height: 1px;
+  background-color: #dbdbdb;
+}
+
+.separator span {
+  margin: 0 10px;
+  font-size: 14px;
+  color: #8e8e8e;
+  font-weight: 500;
+}
+

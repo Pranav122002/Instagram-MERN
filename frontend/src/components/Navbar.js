@@ -22,6 +22,7 @@ import {
 } from "./SvgIcons";
 
 export default function Navbar({ login }) {
+  
   const navigate = useNavigate();
   const { setModalOpen } = useContext(LoginContext);
   const location = useLocation();
@@ -40,16 +41,11 @@ export default function Navbar({ login }) {
     if (!token) {
       navigate("./signup");
     } else {
-      fetch(
-        `/user/${
-          JSON.parse(localStorage.getItem("user"))._id
-        }`,
-        {
-          headers: {
-            Authorization: "Bearer " + localStorage.getItem("jwt"),
-          },
-        }
-      )
+      fetch(`/user/${JSON.parse(localStorage.getItem("user"))._id}`, {
+        headers: {
+          Authorization: "Bearer " + localStorage.getItem("jwt"),
+        },
+      })
         .then((res) => res.json())
         .then((result) => {
           setUser(result.user);
@@ -83,7 +79,6 @@ export default function Navbar({ login }) {
 
           <NavLink to="/search">
             <li>
-           
               <span className="spanicon">
                 {!onSearch ? searchIconOutline : searchIconFill}
               </span>
@@ -204,7 +199,6 @@ export default function Navbar({ login }) {
       return [
         <>
           <div id="mob-top-div">
-
             <div>
               <img
                 id="insta-logo-top"
@@ -216,24 +210,15 @@ export default function Navbar({ login }) {
               />
             </div>
 
-
-
             <Link to="/search">
-           
-           
               <span className="spanicon">
                 {!onSearch ? searchIconOutline : searchIconFill}
               </span>
-              
-        
-          </Link>
-
+            </Link>
 
             <Link to="/messenger">
               <span id="msg-top">{onChat ? messageFill : messageOutline}</span>
             </Link>
-
-
           </div>
         </>,
       ];

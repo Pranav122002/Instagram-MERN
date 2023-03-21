@@ -4,6 +4,7 @@ import "../css/Profile.css";
 import { useParams } from "react-router-dom";
 
 export default function UserProfie() {
+  
   var picLink = "https://cdn-icons-png.flaticon.com/128/3177/3177440.png";
   const { userid } = useParams();
   const [isFollow, setIsFollow] = useState(false);

@@ -3,17 +3,15 @@ import "../css/PostDetail.css";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-export default function PostDetail({ item, toggleDetails  }) {
+export default function PostDetail({ item, toggleDetails }) {
+  
   const navigate = useNavigate();
 
   // Toast functions
   const notifyA = (msg) => toast.error(msg);
   const notifyB = (msg) => toast.success(msg);
 
-
-
-console.log(item);
-
+  console.log(item);
 
   const removePost = (postId) => {
     if (window.confirm("Do you really want to delete this post ?")) {
@@ -25,8 +23,6 @@ console.log(item);
       })
         .then((res) => res.json())
         .then((result) => {
-        
-          
           console.log(result);
           toggleDetails();
           navigate("/");
@@ -93,17 +89,17 @@ console.log(item);
             <input
               type="text"
               placeholder="Add a comment"
-            //   value={comment}
-            //   onChange={(e) => {
-            //     setComment(e.target.value);
-            //   }}
+              //   value={comment}
+              //   onChange={(e) => {
+              //     setComment(e.target.value);
+              //   }}
             />
             <button
               className="comment"
-            //   onClick={() => {
-            //     makeComment(comment, item._id);
-            //     toggleComment();
-            //   }}
+              //   onClick={() => {
+              //     makeComment(comment, item._id);
+              //     toggleComment();
+              //   }}
             >
               Post
             </button>

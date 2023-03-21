@@ -4,7 +4,9 @@ import "../css/Modal.css";
 import { useNavigate } from "react-router-dom";
 
 export default function Modal({ setModalOpen }) {
+
   const navigate = useNavigate();
+  
   return (
     <div className="darkBg" onClick={() => setModalOpen(false)}>
       <div className="centered">
@@ -18,6 +20,19 @@ export default function Modal({ setModalOpen }) {
           </button>
           {/* modal content */}
           <div className="modalContent">Are you really want to log Out ?</div>
+
+
+
+          <div className="separator">
+        <div className="line"></div>
+    
+        <div className="line"></div>
+      </div>
+
+
+
+
+
           <div className="modalActions">
             <div className="actionsContainer">
               <button
@@ -32,7 +47,7 @@ export default function Modal({ setModalOpen }) {
               </button>
 
               <button className="cancelBtn" onClick={() => setModalOpen(false)}>
-                cancel
+                Cancel
               </button>
             </div>
           </div>

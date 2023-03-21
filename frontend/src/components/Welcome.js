@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-
 import { useNavigate } from "react-router-dom";
 
 export default function Welcome() {
+
   const navigate = useNavigate();
   const [userName, setUserName] = useState("");
 
@@ -12,16 +12,11 @@ export default function Welcome() {
     if (!token) {
       navigate("/signup");
     } else {
-      fetch(
-        `/user/${
-          JSON.parse(localStorage.getItem("user"))._id
-        }`,
-        {
-          headers: {
-            Authorization: "Bearer " + localStorage.getItem("jwt"),
-          },
-        }
-      )
+      fetch(`/user/${JSON.parse(localStorage.getItem("user"))._id}`, {
+        headers: {
+          Authorization: "Bearer " + localStorage.getItem("jwt"),
+        },
+      })
         .then((res) => res.json())
         .then((result) => {
           console.log("...setusername...");
@@ -74,7 +69,7 @@ export default function Welcome() {
             ></polygon>
           </svg>
         </div>
-        <p id="your">Your messages</p >
+        <p id="your">Your messages</p>
         <p id="text">Send private photos and messages to a friend or group.</p>
         <button>Send message</button>
       </div>
@@ -89,16 +84,15 @@ const Container = styled.div`
   color: black;
   flex-direction: column;
 
-#your{
-  font-size: larger
- 
-}
-#text{
-  padding-left: 5px;
-  padding-right: 5px;
-  color: rgb(142, 142, 142);
-  font-size: small;
-}
+  #your {
+    font-size: larger;
+  }
+  #text {
+    padding-left: 5px;
+    padding-right: 5px;
+    color: rgb(142, 142, 142);
+    font-size: small;
+  }
   button {
     color: white;
     background-color: rgb(0, 149, 256);

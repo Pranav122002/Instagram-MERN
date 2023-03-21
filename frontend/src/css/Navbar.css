@@ -1,19 +1,11 @@
-
-
-
 .one {
-
   width: 100%;
   height: 10%;
-} 
- 
+}
+
 .two {
-
   width: 100%;
-
-} 
-
-
+}
 
 .nav-mobile {
   display: none;
@@ -21,26 +13,16 @@
 .nav-mobile-top {
   display: none;
 }
- 
- 
- 
- 
- 
- 
- 
- 
- #insta-logo {
+
+#insta-logo {
   width: 70%;
- margin: 7px  7px  7px  7px ;
+  margin: 7px 7px 7px 7px;
   object-fit: contain;
 }
 
 .navbar {
- 
- 
   border-right: 1px solid rgb(219, 219, 219);
-  
-  
+
   margin: 0;
   padding: 0;
   width: 17%;
@@ -51,9 +33,7 @@
   flex-direction: column;
 
   min-width: 180px;
-
 }
-
 
 .spanicon {
   margin-right: 10px;
@@ -71,18 +51,16 @@ li {
   list-style: none;
   width: 90%;
   padding-left: 20px;
- 
+
   padding-top: 10px;
   padding-bottom: 10px;
 
-margin-left: 10px;
+  margin-left: 10px;
 
   display: flex;
-  align-items:flex-start;
- border-radius: 18px;
-
+  align-items: flex-start;
+  border-radius: 18px;
 }
-
 
 a {
   text-decoration: none;
@@ -90,8 +68,6 @@ a {
   font-size: 18px;
   width: 95%;
   padding-left: 0px;
-  
- 
 }
 
 .primaryBtn {
@@ -120,86 +96,64 @@ a {
   padding-left: 0px;
 }
 
-
- li:hover {
-       background-color: #F5F5F5;
-       color: black;
-      }
+li:hover {
+  background-color: #f5f5f5;
+  color: black;
+}
 
 .active {
-     font-weight: bolder;
-
-     }
-
-
-    
-    
-
-
-
-
-
- 
+  font-weight: bolder;
+}
 
 @media screen and (max-width: 800px) {
-
-  .navbar{
+  .navbar {
     display: none;
   }
-  
 
   .nav-mobile {
     width: 100%;
     position: fixed;
-   
+
     display: flex;
     flex-direction: row;
-   
+
     bottom: -17px;
     left: 0;
     background-color: #fff;
-   
-   
   }
 
   .nav-mobile-top {
     width: 100%;
     position: fixed;
-   
+
     display: flex;
     flex-direction: row;
-   
+
     top: -17px;
     left: 0;
     background-color: #fff;
-
-   
   }
   #msg-top {
     position: relative;
     float: right;
     margin-right: 10%;
-    
   }
 
- 
   #insta-logo-top {
     width: 50%;
     float: left;
     margin-left: 10px;
   }
   #mob-top-div {
-/* display: flex; */
-display: grid;
-grid-template-columns: 70% 15% 10%;
-align-items: flex-end;
-/* justify-content: center; */
-
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: 70% 15% 10%;
+    align-items: flex-end;
+    /* justify-content: center; */
   }
 
- .nav-mobile li {
-  justify-content: center;
-  padding-left: 0px;
- }
-}    
-
+  .nav-mobile li {
+    justify-content: center;
+    padding-left: 0px;
+  }
+}

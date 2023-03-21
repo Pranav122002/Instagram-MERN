@@ -1,0 +1,30 @@
+.div {
+  background-image: url("../img/cont.png");
+  /* background-image: url("https://www.instagram.com/static/images/homepage/phones/home-phones.png/1dc085cdb87d.png"); */
+  background-repeat: no-repeat;
+  display: block;
+  /* height: 100%; */
+  /* margin-top: 50rem; */
+}
+
+.img {
+  margin-left: 155px;
+  margin-top: 1.8rem;
+  margin-right: 80px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: middle;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+/* .imgescont{
+    width: 40%;
+} */
+
+@media screen and (max-width: 800px) {
+  .div {
+    display: none;
+  }
+}

@@ -1,27 +1,20 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import ChatInput from "./ChatInput";
-
 import { v4 as uuidv4 } from "uuid";
 
 export default function ChatContainer({ currentChat, socket }) {
+
   const [messages, setMessages] = useState([]);
   const scrollRef = useRef();
   const [arrivalMessage, setArrivalMessage] = useState(null);
 
-
-  
   useEffect(() => {
-    fetch(
-      `/user/${
-        JSON.parse(localStorage.getItem("user"))._id
-      }`,
-      {
-        headers: {
-          Authorization: "Bearer " + localStorage.getItem("jwt"),
-        },
-      }
-    )
+    fetch(`/user/${JSON.parse(localStorage.getItem("user"))._id}`, {
+      headers: {
+        Authorization: "Bearer " + localStorage.getItem("jwt"),
+      },
+    })
       .then((res) => res.json())
       .then((result) => {
         fetch("/getmsg", {
@@ -48,9 +41,7 @@ export default function ChatContainer({ currentChat, socket }) {
       if (currentChat) {
         JSON.parse(
           localStorage.getItem(
-            `/user/${
-              JSON.parse(localStorage.getItem("user"))._id
-            }`
+            `/user/${JSON.parse(localStorage.getItem("user"))._id}`
           )
         );
       }
@@ -59,16 +50,11 @@ export default function ChatContainer({ currentChat, socket }) {
   }, [currentChat]);
 
   const handleSendMsg = (msg) => {
-    fetch(
-      `/user/${
-        JSON.parse(localStorage.getItem("user"))._id
-      }`,
-      {
-        headers: {
-          Authorization: "Bearer " + localStorage.getItem("jwt"),
-        },
-      }
-    )
+    fetch(`/user/${JSON.parse(localStorage.getItem("user"))._id}`, {
+      headers: {
+        Authorization: "Bearer " + localStorage.getItem("jwt"),
+      },
+    })
       .then((res) => res.json())
       .then((result) => {
         socket.current.emit("send-msg", {
@@ -147,7 +133,6 @@ export default function ChatContainer({ currentChat, socket }) {
     </Container>
   );
 }
-
 
 const Container = styled.div`
   display: grid;

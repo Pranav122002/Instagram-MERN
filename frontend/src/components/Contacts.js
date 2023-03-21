@@ -2,22 +2,18 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 
-
 export default function Contacts({ contacts, changeChat }) {
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const [currentUserName, setCurrentUserName] = useState(undefined);
-
   const [currentSelected, setCurrentSelected] = useState(undefined);
-
 
   useEffect(() => {
     const token = localStorage.getItem("jwt");
     if (!token) {
       navigate("./signup");
     } else {
-    
       fetch(`/user/${JSON.parse(localStorage.getItem("user"))._id}`, {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("jwt"),
@@ -25,34 +21,24 @@ export default function Contacts({ contacts, changeChat }) {
       })
         .then((res) => res.json())
         .then((result) => {
-   
           setCurrentUserName(result.user.userName);
         });
     }
-
-   
   }, []);
-
 
   const changeCurrentChat = (index, contact) => {
     setCurrentSelected(index);
     changeChat(contact);
   };
 
-
   return (
     <>
-      {  (
+      {
         <Container>
-        
-
-        <div className="current-user">
-            
-           
-              <p>{currentUserName}</p>
-            
+          <div className="current-user">
+            <p>{currentUserName}</p>
           </div>
-          
+
           <div className="contacts">
             {contacts.map((contact, index) => {
               return (
@@ -63,7 +49,6 @@ export default function Contacts({ contacts, changeChat }) {
                   }`}
                   onClick={() => changeCurrentChat(index, contact)}
                 >
-                 
                   <div className="username">
                     <h3>{contact.userName}</h3>
                   </div>
@@ -71,10 +56,8 @@ export default function Contacts({ contacts, changeChat }) {
               );
             })}
           </div>
-
-         
         </Container>
-      )}
+      }
     </>
   );
 }
@@ -163,7 +146,7 @@ const Container = styled.div`
 //   grid-template-rows: 10% 75% 15%;
 //   overflow: hidden;
 //   background-color: #080420;
-  
+
 //   .brand {
 //     display: flex;
 //     align-items: center;
