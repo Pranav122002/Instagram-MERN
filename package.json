@@ -1,7 +1,7 @@
 {
-  "name": "instagram-clone",
+  "name": "instagram-mern",
   "version": "1.0.0",
-  "description": "Instagram Clone with Messenger Mern Stack",
+  "description": "Mern Stack Instagram with Messenger",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
