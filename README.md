@@ -2,6 +2,9 @@
 
 A Instagram Clone with Messenger implemented using React, Nodejs, Express and MongoDB.
 
+## See live demo at :
+https://mern-instagram.vercel.app/
+
 ## Functionalities this Instagram clone has :
 
 - Signin, Signup, Forgot password and Logout
