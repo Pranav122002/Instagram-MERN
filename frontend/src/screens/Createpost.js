@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../css/Createpost.css";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { CLOUD_NAME, UPLOAD_PRESET } from "../config";
 
 export default function Createpost() {
   
@@ -64,9 +65,9 @@ export default function Createpost() {
     console.log(body, image);
     const data = new FormData();
     data.append("file", image);
-    data.append("upload_preset", "instagram-clone-with-messenger");
-    data.append("cloud_name", "pranavpatil122002");
-    fetch("https://api.cloudinary.com/v1_1/pranavpatil122002/image/upload", {
+    data.append("upload_preset", UPLOAD_PRESET);
+    data.append("cloud_name", CLOUD_NAME);
+    fetch(`https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`, {
       method: "post",
       body: data,
     })

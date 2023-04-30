@@ -2,9 +2,6 @@
 
 A Instagram Clone with Messenger implemented using React, Nodejs, Express and MongoDB.
 
-## See live demo at :
-https://mern-instagram.vercel.app/
-
 ## Functionalities this Instagram clone has :
 
 - Signin, Signup, Forgot password and Logout
@@ -31,20 +28,20 @@ https://mern-instagram.vercel.app/
 Clone the project:
 
 ```
-git clone https://github.com/Pranav122002/Instagram-Clone-with-Messenger.git
+git clone https://github.com/Pranav122002/Instagram-MERN.git
 ```
 
 Install dependencies for backend:
 
 ```
-cd .\Instagram-Clone-with-Messenger\
+cd .\Instagram-MERN\
 npm install
 ```
 
 Install dependencies for frontend:
 
 ```
-cd .\Instagram-Clone-with-Messenger\frontend\
+cd .\Instagram-MERN\frontend\
 npm install
 ```
 
@@ -56,6 +53,13 @@ module.exports = {
     JWT_SECRET: <your jwt secret>
 };
 
+```
+
+Create config.js file in frontend/src/ and change your cloudname of cloudinary in this format:
+
+```
+export const CLOUD_NAME = <your cloud name>;
+export const UPLOAD_PRESET = "instagram-clone-with-messenger";
 ```
 
 Start the project:
@@ -89,6 +93,11 @@ npm run build
 - Nodejs
 - Express
 - MongoDB
+
+## Demo videos
+Demo video
+
+responsive design demo video
 
 ## Demo images
 
