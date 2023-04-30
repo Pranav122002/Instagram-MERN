@@ -1,6 +1,9 @@
 # Instagram Clone with Messenger
 
-A Instagram Clone with Messenger implemented using React, Nodejs, Express and MongoDB.
+A Instagram Clone with Messenger implemented using React, Nodejs, Express, MongoDB and Socket.IO.
+
+## Demo :
+https://mern-instagram.vercel.app/
 
 ## Functionalities this Instagram clone has :
 
@@ -97,7 +100,15 @@ npm run build
 ## Demo videos
 Demo video
 
-responsive design demo video
+
+https://user-images.githubusercontent.com/83356594/235359495-e87d8f2c-56ec-4a02-9046-35d034bdd417.mp4
+
+
+Responsive design demo video
+
+
+https://user-images.githubusercontent.com/83356594/235359509-fb9560b4-cd50-4f2a-8726-63ffa0aaf59e.mp4
+
 
 ## Demo images
 
