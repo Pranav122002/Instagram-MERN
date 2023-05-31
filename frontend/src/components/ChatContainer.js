@@ -10,14 +10,14 @@ export default function ChatContainer({ currentChat, socket }) {
   const [arrivalMessage, setArrivalMessage] = useState(null);
 
   useEffect(() => {
-    fetch(`/user/${JSON.parse(localStorage.getItem("user"))._id}`, {
+    fetch(`http://localhost:5000/user/${JSON.parse(localStorage.getItem("user"))._id}`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
     })
       .then((res) => res.json())
       .then((result) => {
-        fetch("/getmsg", {
+        fetch("http://localhost:5000/getmsg", {
           method: "post",
           headers: {
             "Content-Type": "application/json",
@@ -41,7 +41,7 @@ export default function ChatContainer({ currentChat, socket }) {
       if (currentChat) {
         JSON.parse(
           localStorage.getItem(
-            `/user/${JSON.parse(localStorage.getItem("user"))._id}`
+            `http://localhost:5000/user/${JSON.parse(localStorage.getItem("user"))._id}`
           )
         );
       }
@@ -50,7 +50,7 @@ export default function ChatContainer({ currentChat, socket }) {
   }, [currentChat]);
 
   const handleSendMsg = (msg) => {
-    fetch(`/user/${JSON.parse(localStorage.getItem("user"))._id}`, {
+    fetch(`http://localhost:5000/user/${JSON.parse(localStorage.getItem("user"))._id}`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
@@ -63,7 +63,7 @@ export default function ChatContainer({ currentChat, socket }) {
           msg,
         });
 
-        fetch("/addmsg", {
+        fetch("http://localhost:5000/addmsg", {
           method: "post",
           headers: {
             "Content-Type": "application/json",

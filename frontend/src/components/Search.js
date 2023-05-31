@@ -11,7 +11,7 @@ export default function Search() {
 
   const fetchUsers = (query) => {
     setSearch(query);
-    fetch("/search-users", {
+    fetch("http://localhost:5000/search-users", {
       method: "post",
       headers: {
         "Content-Type": "application/json",

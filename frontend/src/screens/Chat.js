@@ -20,7 +20,7 @@ export default function Chat() {
     if (!token) {
       navigate("./signup");
     } else {
-      fetch(`/user/${JSON.parse(localStorage.getItem("user"))._id}`, {
+      fetch(`http://localhost:5000/user/${JSON.parse(localStorage.getItem("user"))._id}`, {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("jwt"),
         },
@@ -43,7 +43,7 @@ export default function Chat() {
   }, [currentUser]);
 
   useEffect(() => {
-    fetch(`/allusers/${JSON.parse(localStorage.getItem("user"))._id}`, {
+    fetch(`http://localhost:5000/allusers/${JSON.parse(localStorage.getItem("user"))._id}`, {
       method: "get",
       headers: {
         "Content-Type": "application/json",

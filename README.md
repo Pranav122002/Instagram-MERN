@@ -33,58 +33,36 @@ Clone the project:
 ```
 git clone https://github.com/Pranav122002/Instagram-MERN.git
 ```
-
-Install dependencies for backend:
-
-```
-cd .\Instagram-MERN\
-npm install
-```
-
-Install dependencies for frontend:
-
-```
-cd .\Instagram-MERN\frontend\
-npm install
-```
-
-Create dev.js in config folder and add your MONGOURI and JWT_SECRET in the format:
-
+Create dev.js in config folder and add your MONGOURI and JWT_SECRET in the format :
+For example : 
 ```
 module.exports = {
     MONGOURI: "mongodb://localhost:27017/instagram-clone-with-messenger",
-    JWT_SECRET: <your jwt secret>
+    JWT_SECRET: "oier98sjnf"
 };
-
 ```
-
 Create config.js file in frontend/src/ and change your cloudname of cloudinary in this format:
-
 ```
 export const CLOUD_NAME = <your cloud name>;
-export const UPLOAD_PRESET = "instagram-clone-with-messenger";
+export const UPLOAD_PRESET = "instagram-mern";
 ```
-
-Start the project:
-
+Open terminal in backend folder and install dependencies :
 ```
+cd .\Instagram-MERN\backend\
+npm install
+node app.js
+```
+Open terminal in frontend folder and install dependencies :
+```
+cd .\Instagram-MERN\frontend\
+npm install
 npm start
 ```
-
-Go to:
-
+Go to :
 ```
-http://localhost:5000/
+http://localhost:3000/
 ```
 
-### Note:
-
-If you do any changes in frontend code, then run this command:
-
-```
-cd .\Instagram-Clone-with-Messenger\frontend\
-npm run build
-```
 
 ## Tech Stack :
 
